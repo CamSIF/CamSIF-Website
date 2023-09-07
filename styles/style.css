@@ -1,0 +1,182 @@
+:root {
+    --main-color: #ffdc58;
+    --grey-color: #1c1d21
+}
+
+html {
+    overflow: auto;
+}
+
+body {
+	margin: 0;
+	background: white;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 800;
+    overflow: auto;
+    overflow: auto;
+}
+
+.nav-container {
+    left: 10px;
+	width: 100%;
+	margin: 0 auto;
+    white-space: nowrap;
+    display: flex;
+
+    align-items: center;
+}
+
+header {
+    background: var(--grey-color);
+    
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    padding: 0px 30px;
+    color: var(--main-color);
+    display: inline-block;
+}
+  
+nav {
+    display: inline-block;
+    margin-left: auto;
+    padding-right: 30px;
+    
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 50px;
+    position: relative;
+    }
+
+nav a {
+    color: var(--main-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: var(--main-color);
+
+    position: absolute;
+    top: 102%;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+nav #join-button {
+    background-color: var(--main-color);
+    transition: all ease-in-out 250ms;
+}
+
+nav #join-button:hover {
+    border-radius: 20px;
+}
+
+nav #join-button a {
+    color: var(--grey-color);
+    display: block;
+    padding: 15px 40px;
+}
+
+#landing-section {
+    height: 70vh; 
+    padding: 50px 100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+        url(../assets/auditorium.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#landing-section h1 {
+    font-weight: 500;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+#landing-section h2 {
+    font-weight: 400;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+#signup-section {
+    vertical-align: middle;
+    display: flex;
+    background-color: white;
+    padding: 50px 100px;
+}
+
+#signup-text {
+    width: 40%;
+}
+
+#signup-text h2 {
+    font-weight: 500;
+    font-size: 35px;
+}
+
+#signup-entry {
+    display: flex;
+    width: 60%;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+#signup-input {
+    border: 1px solid lightgrey;
+    font-family: 'Poppins', sans-serif;
+    padding: 22px 30px;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 220px;
+}
+
+#signup-submit {
+    border: none;
+    background-color: var(--grey-color);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 20px 30px;
+    width: 280px;
+    cursor: pointer;
+}
+
+#signup-input:focus {
+    outline-width: 0;
+}
+
+  
