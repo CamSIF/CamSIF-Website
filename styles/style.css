@@ -1,10 +1,13 @@
 :root {
     --main-color: #ffdc58;
-    --grey-color: #1c1d21
+    --grey-color: #1c1d21;
+    --page-margin: 150px;
 }
 
 html {
     overflow: auto;
+    scroll-behavior: smooth;
+    background-color: var(--grey-color);
 }
 
 body {
@@ -13,7 +16,20 @@ body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 800;
     overflow: auto;
-    overflow: auto;
+    animation: fadeInAnimation ease-out .7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+     }
 }
 
 .nav-container {
@@ -24,11 +40,13 @@ body {
     display: flex;
 
     align-items: center;
+    
+    
 }
 
-header {
+#header {
+    padding: 0px var(--page-margin);
     background: var(--grey-color);
-    
 }
 
 header::after {
@@ -38,7 +56,6 @@ header::after {
 }
 
 .logo {
-    padding: 0px 30px;
     color: var(--main-color);
     display: inline-block;
 }
@@ -46,7 +63,6 @@ header::after {
 nav {
     display: inline-block;
     margin-left: auto;
-    padding-right: 30px;
     
 }
 
@@ -101,9 +117,17 @@ nav #join-button a {
     padding: 15px 40px;
 }
 
-#landing-section {
+.section {
+    padding: 50px var(--page-margin)
+}
+
+.section-text h2 {
+    font-weight: 500;
+    font-size: 35px;
+}
+
+#landing {
     height: 70vh; 
-    padding: 50px 100px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -113,9 +137,11 @@ nav #join-button a {
         url(../assets/auditorium.png); 
     background-repeat: no-repeat;
     background-size: cover;
+    
+    white-space: nowrap;
 }
 
-#landing-section h1 {
+#landing h1 {
     font-weight: 500;
     font-size: 50px;
     margin: 0;
@@ -123,37 +149,33 @@ nav #join-button a {
     margin-bottom: 40px;
 }
 
-#landing-section h2 {
+#landing h2 {
     font-weight: 400;
     font-size: 40px;
     margin: 0;
     padding: 0;
 }
 
-#signup-section {
+#signup {
     vertical-align: middle;
     display: flex;
     background-color: white;
-    padding: 50px 100px;
 }
 
-#signup-text {
+#signup .left {
     width: 40%;
 }
 
-#signup-text h2 {
-    font-weight: 500;
-    font-size: 35px;
+#signup .right {
+    width: 60%;
 }
 
 #signup-entry {
     display: flex;
-    width: 60%;
     text-align: center;
     justify-content: flex-end;
     align-items: center;
 }
-
 
 #signup-input {
     border: 1px solid lightgrey;
@@ -179,4 +201,25 @@ nav #join-button a {
     outline-width: 0;
 }
 
+#info {
+    vertical-align: middle;
+    display: flex;
+    gap: 50px;
+    color: white;
+    background-color: var(--grey-color);
+}
+
+#info .right h2 {
+    font-weight: 300;
+    font-size: 30px;
+}
+
+#info .left {
+    width: 55%;
+}
+
+#info .right {
+    width: 45%;
+    
+}
   

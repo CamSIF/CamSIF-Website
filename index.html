@@ -9,43 +9,78 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+      window.addEventListener("load", function() {
+        const form = document.getElementById('signup-form');
+        form.addEventListener("submit", function(e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          const action = e.target.action;
+          fetch(action, {
+            method: 'POST',
+            body: data,
+          })
+          .then(() => {
+            alert("You've subscribed — check your inbox shortly for a message!");
+          })
+        });
+      });
+    </script>
   </head>
-  <header>
-    <div class="nav-container">
-      <h1 class="logo">CamSIF</h1>
-      <nav>
-        <ul>
-          <li><a class="nav-link" href="#">About</a></li>
-          <li><a class="nav-link" href="#">Termcard</a></li>
-          <li><a class="nav-link" href="#">Contact</a></li>
-          <li>
-            <div id="join-button">
-              <a href="#">Join</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <body>
     
+    
+  <body>
+    <div id="header">
+      <div class="nav-container">
+        <h1 class="logo">CamSIF</h1>
+        <nav>
+          <ul>
+            <li><a class="nav-link" href="#">About</a></li>
+            <li><a class="nav-link" href="#">Termcard</a></li>
+            <li><a class="nav-link" href="#">Contact</a></li>
+            <li>
+              <div id="join-button">
+                <a href="#signup">Join</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <!-- <img src="assets/auditorium.png" alt="CamSIF auditorium"> -->
-    <div class="main-section" id="landing-section">
+    <div class="section" id="landing">
       <h2>Welcome to the</h2>
       <h1>Cambridge Student Investment Fund</h1>
     </div>
-    <div class="main-section" id="signup-section">
-      <div id="signup-text">
+    <div class="section" id="signup">
+      <div class="section-text left">
         <h2>
           Join Cambridge's largest, most active, and most inclusive finance community.
         </h2>
       </div>
-      <div id="signup-entry">
-        <form>
-          <input id="signup-input" type="text" placeholder="Email Address">
+      <div id="signup-entry" class="right">
+        <form 
+          method="POST"
+          action="https://script.google.com/a/macros/cam.ac.uk/s/AKfycbxC5fNosCdrDtDBmo9JHBItsP6br7jqoA08rU8yC9sLt2t0VR9VMawR4q8yq-m1CpG9/exec"
+          id="signup-form"
+        >
+          <input id="signup-input" type="email" name="Email" placeholder="Email Address">
           <input id="signup-submit" type="submit" value="Join the Mailing List">
         </form>
       </div>
+    </div>
+    <div class="section" id="info">
+      <div class="section-text left">
+        <h2>
+          We provide eager students with a unique opportunity to gain experience in investment and markets.
+        </h2>
+      </div>
+      <div class="section-text right">
+        <h2>
+          No prior knowledge or finance experience is required, and Cambridge students of any degree course are welcome. 
+        </h2>
+      </div>
+      
     </div>
   </body>
 </html>
