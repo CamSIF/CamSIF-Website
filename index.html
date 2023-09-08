@@ -19,6 +19,8 @@
           fetch(action, {
             method: 'POST',
             body: data,
+            headers: {
+            }
           })
           .then(() => {
             alert("You've subscribed — check your inbox shortly for a message!");
@@ -61,10 +63,10 @@
       <div id="signup-entry" class="right">
         <form 
           method="POST"
-          action="https://script.google.com/a/macros/cam.ac.uk/s/AKfycbxC5fNosCdrDtDBmo9JHBItsP6br7jqoA08rU8yC9sLt2t0VR9VMawR4q8yq-m1CpG9/exec"
+          action="https://script.google.com/macros/s/AKfycbzwL26AJeSfBopCpdsbf3HqLQBE-XA1dBFIyv5LDm3gOkiR6vBwekWkmbboHcJTxauK/exec"
           id="signup-form"
         >
-          <input id="signup-input" type="email" name="Email" placeholder="Email Address">
+          <input id="signup-input" type="email" name="Email" placeholder="Email Address" required>
           <input id="signup-submit" type="submit" value="Join the Mailing List">
         </form>
       </div>
