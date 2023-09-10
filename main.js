@@ -1,7 +1,6 @@
 
 const popup = document.getElementById("signup-popup");
 popup.onclick = function(){
-    console.log("bruh");
     popup.style.display = "none";
 };
 
