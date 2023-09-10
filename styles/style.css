@@ -219,16 +219,16 @@ nav #join-button a {
     align-items: center;
 }
 
-#signup-input {
+.signup-input {
     border: 1px solid lightgrey;
     font-family: 'Poppins', sans-serif;
     padding: 22px 30px;
     margin: 10px;
-    margin-bottom: 20px;
+    margin-top: 0px;
     width: 220px;
 }
 
-#signup-input:focus {
+.signup-input:focus {
     outline-width: 0;
 }
 
@@ -239,6 +239,7 @@ nav #join-button a {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     padding: 20px 30px;
+    margin-top: 20px;
     width: 280px;
     cursor: pointer;
     transition: all ease-in-out 250ms;
