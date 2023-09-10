@@ -9,31 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <script>
-      window.addEventListener("load", function() {
-        const form = document.getElementById('signup-form');
-        form.addEventListener("submit", function(e) {
-          e.preventDefault();
-          const data = new FormData(form);
-          const action = e.target.action;
-          fetch(action, {
-            method: 'POST',
-            body: data,
-            headers: {
-            }
-          })
-          .then(() => {
-            alert("You've subscribed — check your inbox shortly for a message!");
-          })
-        });
-      });
-    </script>
   </head>
     
     
   <body>
-    <div id="header">
-      <div class="nav-container">
+    <div id="navbar">
+      <div id="nav-container">
         <h1 class="logo">CamSIF</h1>
         <nav>
           <ul>
@@ -49,7 +30,6 @@
         </nav>
       </div>
     </div>
-    <!-- <img src="assets/auditorium.png" alt="CamSIF auditorium"> -->
     <div class="section" id="landing">
       <h2>Welcome to the</h2>
       <h1>Cambridge Student Investment Fund</h1>
@@ -70,6 +50,16 @@
           <input id="signup-submit" type="submit" value="Join the Mailing List">
         </form>
       </div>
+      <div id="signup-popup">
+        <h2> 
+          <b>Thanks for joining CamSIF.</b>
+          <br><br>
+          Check your email for a confirmation soon.
+        </h2>
+        <div id="signup-popup-close">
+          <p>Close</p>
+        </div>
+      </div>
     </div>
     <div class="section" id="info">
       <div class="section-text left">
@@ -85,4 +75,5 @@
       
     </div>
   </body>
+  <script src="main.js"></script>
 </html>
