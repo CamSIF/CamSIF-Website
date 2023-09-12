@@ -84,8 +84,8 @@ body {
 }
 
 .header .logo {
-    color: var(--main-color);
-    display: inline-block;
+    width: 250px;
+    padding: 20px;
 }
 
 .header .hamburger {

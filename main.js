@@ -22,6 +22,7 @@ window.addEventListener("resize", function () {
     }
     else {
         menu.style.display = "none";
+        menuCheck.checked = false;
     }
 });
 
