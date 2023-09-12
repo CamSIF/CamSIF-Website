@@ -95,7 +95,6 @@ body {
 nav {
     display: inline-block;
     margin-left: auto;
-    
 }
 
 nav ul {
@@ -148,6 +147,7 @@ nav a {
 }
 
 #join-button {
+    border-radius: 5px;
     background-color: var(--main-color);
     transition: all ease-in-out 250ms;
 }
