@@ -1,3 +1,29 @@
+// Shared with CSS!
+MOBILE_WIDTH = 1100;
+
+const menu = document.querySelector("nav");
+const menuCheck = document.getElementById("hamburger-checkbox");
+
+function openMenu() {
+    menu.style.display = menuCheck.checked ? "flex" : "none";
+}
+
+function goToSignUp() {
+    if (window.innerWidth <= MOBILE_WIDTH) {
+        menu.style.display = "none";
+        menuCheck.checked = false;
+    }
+}
+
+window.addEventListener("resize", function () {
+    if (window.innerWidth > MOBILE_WIDTH) {
+        menu.style.display = "flex";
+        menuCheck.checked = false;
+    }
+    else {
+        menu.style.display = "none";
+    }
+});
 
 const popup = document.getElementById("signup-popup");
 popup.onclick = function(){

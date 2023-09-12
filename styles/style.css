@@ -4,8 +4,6 @@
     --page-margin: 150px;
 }
 
-
-
 html {
     overflow: auto;
     scroll-behavior: smooth;
@@ -61,6 +59,10 @@ body {
     padding: 0px var(--page-margin);
     background: var(--grey-color);
     border: none;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 50;
 
     animation: fadeInAnimation ease-out .8s;
     animation-iteration-count: 1;
@@ -74,18 +76,20 @@ body {
 }
 
 #nav-container {
-    left: 10px;
-	width: 100%;
-	margin: 0 auto;
-    white-space: nowrap;
     display: flex;
+	width: 100%;
 
-    align-items: center;  
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo {
+.header .logo {
     color: var(--main-color);
     display: inline-block;
+}
+
+.header .hamburger {
+    display: none;
 }
   
 nav {
@@ -95,13 +99,20 @@ nav {
 }
 
 nav ul {
+    display: grid;
+    grid-auto-flow: column;
+    list-style-type: none;
+    column-gap: 50px;
+    padding: 0;
     list-style: none;
+    
 }
 
 nav li {
-    display: inline-block;
-    margin-left: 50px;
-    position: relative;
+    width: min-content;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
     }
 
 nav a {
@@ -130,31 +141,38 @@ nav a {
     width: 100%;
 }
 
-nav #join-button {
+#nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 30px
+}
+
+#join-button {
     background-color: var(--main-color);
     transition: all ease-in-out 250ms;
 }
 
-nav #join-button:hover {
-    border-radius: 20px;
+#join-button:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.5);
 }
 
-nav #join-button a {
+#join-button a {
     color: var(--grey-color);
     display: block;
     padding: 15px 40px;
 }
 
 .section {
-    padding: 50px var(--page-margin)
+    padding: 50px var(--page-margin);
 }
 
-.section-text h2 {
+h2 {
     font-weight: 500;
     font-size: 35px;
 }
 
 #landing {
+    margin-top: 10vh;
     height: 75vh; 
     display: flex;
     flex-direction: column;
@@ -167,7 +185,7 @@ nav #join-button a {
     border-bottom: 100px solid var(--grey-color);
     padding-bottom: 0px;
     white-space: nowrap;
-
+    overflow: hidden;
 }
 
 #landing h2 {
@@ -214,18 +232,27 @@ nav #join-button a {
 
 #signup-entry {
     display: flex;
-    text-align: center;
-    justify-content: flex-end;
+    justify-content: right;
     align-items: center;
+}
+
+#signup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min-content;
 }
 
 .signup-input {
     border: 1px solid lightgrey;
     font-family: 'Poppins', sans-serif;
+    font-size: 20px;
     padding: 22px 30px;
     margin: 10px;
     margin-top: 0px;
-    width: 220px;
+    width: 400px;
+    height: 70px;
+    box-sizing: border-box;
 }
 
 .signup-input:focus {
@@ -238,9 +265,11 @@ nav #join-button a {
     color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
+    font-size: 20px;
     padding: 20px 30px;
     margin-top: 20px;
-    width: 280px;
+    width: 400px;
+    box-sizing: border-box;
     cursor: pointer;
     transition: all ease-in-out 250ms;
 
