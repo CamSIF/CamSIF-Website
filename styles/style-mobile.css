@@ -1,8 +1,8 @@
 
 @media screen and (max-width: 1100px) {
     :root {
-        --hamburger-width: 30px;
-        --page-margin: 50px;
+        --hamburger-width: 25px;
+        --page-margin: 30px;
     }
 
     #nav-container {
@@ -13,6 +13,10 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+    }
+
+    .header .logo {
+        width: min(70%, 200px);
     }
     
     .header .hamburger {
@@ -99,7 +103,7 @@
     }
 
     #landing h1 {
-        font-size: 40px;
+        font-size: 2em;
         white-space: wrap;
     }
 
@@ -110,6 +114,10 @@
     #signup {
         flex-direction: column;
         gap: 40px;
+    }
+
+    #signup .section-text h2 {
+        font-size: 1.5em;
     }
 
     #signup form {
@@ -134,7 +142,7 @@
 
     #signup .left {
         width: 100%;
-        font-size: 2em;
+        font-size: .8em;
     }
 
     #signup .right {

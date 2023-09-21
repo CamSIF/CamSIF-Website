@@ -8,7 +8,7 @@ function openMenu() {
     menu.style.display = menuCheck.checked ? "flex" : "none";
 }
 
-function goToSignUp() {
+function menuClicked() {
     if (window.innerWidth <= MOBILE_WIDTH) {
         menu.style.display = "none";
         menuCheck.checked = false;
