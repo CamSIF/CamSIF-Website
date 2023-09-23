@@ -5,49 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CamSIF</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/style-mobile.css">
+    <link rel="stylesheet" href="styles/template.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index-mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+      $(function(){
+        $("#navbar").load("nav.html"); 
+      });
+    </script>
   </head>
     
     
   <body>
-    <div id="navbar">
-      <div id="nav-container">
-        <div class="header">
-          <img class="logo" src="assets/Logo.png">
-          <div class="hamburger">
-            <input type="checkbox" id="hamburger-checkbox" onclick="openMenu()">
-            <label for="hamburger-checkbox">
-              <div></div>
-              <div></div>
-              <div></div>
-            </label>  
-          </div>
-          
-        </div>
-        <nav>
-          <ul>
-            <li><a class="nav-link" href="#info" onclick="menuClicked()">About</a></li>
-            <li><a class="nav-link" href="#" onclick="menuClicked()">Termcard</a></li>
-            <li><a class="nav-link" href="#" onclick="menuClicked()">Contact</a></li>
-            <li id="nav-icons">
-              <a class="fa fa-linkedin fa-xl" href="https://www.linkedin.com/company/camsif/"></a>
-              <a class="fa fa-facebook" href="https://www.facebook.com/CamSIF/"></a>
-              <a class="fa fa-instagram" href="https://www.instagram.com/cambridgesif/"></a>
-            </li>
-            <li>
-              <div id="join-button">
-                <a href="#signup" onclick="menuClicked()">Join</a>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+    <div id="navbar"></div>
+
     <div class="section" id="landing">
       <h2>Welcome to the</h2>
       <h1>
@@ -100,4 +76,5 @@
     </div>
   </body>
   <script src="main.js"></script>
+  <script src="index.js"></script>
 </html>

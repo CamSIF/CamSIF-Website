@@ -1,51 +1,38 @@
+//Core logic shared between all pages
+
 // Shared with CSS!
 MOBILE_WIDTH = 1100;
 
-const menu = document.querySelector("nav");
-const menuCheck = document.getElementById("hamburger-checkbox");
-
 function openMenu() {
-    menu.style.display = menuCheck.checked ? "flex" : "none";
+    if ($("#hamburger-checkbox").prop("checked")) {
+        $("nav").css('display', 'flex');
+    } else {
+        $("nav").hide();
+    }
 }
+
 
 function menuClicked() {
     if (window.innerWidth <= MOBILE_WIDTH) {
-        menu.style.display = "none";
-        menuCheck.checked = false;
+        $("nav").hide();
+        $("#hamburger-checkbox").prop("checked", false);
     }
 }
 
-window.addEventListener("resize", function () {
-    if (window.innerWidth > MOBILE_WIDTH) {
-        menu.style.display = "flex";
-        menuCheck.checked = false;
-    }
-    else {
-        menu.style.display = "none";
-        menuCheck.checked = false;
+$(document).mouseup(function(e) 
+{
+    if (!$("nav:visible")) return;
+    if(!$(e.target).closest("#nav-container").length){
+        menuClicked();
     }
 });
 
-const popup = document.getElementById("signup-popup");
-popup.onclick = function(){
-    popup.style.display = "none";
-};
-
-window.addEventListener("load", function() {
-    const form = document.getElementById('signup-form');
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      const data = new FormData(form);
-      const action = e.target.action;
-      fetch(action, {
-        method: 'POST',
-        body: data,
-        headers: {
-        }
-      })
-      .then(() => {
-        popup.style.display = "block";
-        popup.classList.add("fadeInSignupPopup");
-      })
-    });
-  });
+window.addEventListener("resize", function () {
+    if (window.innerWidth > MOBILE_WIDTH) {
+        $("nav").css('display', 'flex');
+    }
+    else {
+        $("nav").hide();
+    }
+    $("#hamburger-checkbox").prop("checked", false);
+});
