@@ -19,6 +19,7 @@ body {
 
 #team-heading p {
     font-weight: 400;
+    text-align: center;
 }
 
 #team-profiles h2 {
@@ -93,7 +94,7 @@ body {
 
 .card .reveal-card {
     opacity: 1;
-    max-height: 300px;
+    max-height: 1000px;
     transform: translateY(0px);
     transition: all ease-in .3s;
 }
