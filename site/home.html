@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CamSIF</title>
+    <link rel="stylesheet" href="../styles/template.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/home-mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+      $(function(){
+        $("#nav").load("../pages/nav.html"); 
+      });
+    </script>
+  </head>
+    
+    
+  <body>
+    <div id="nav"></div>
+
+    <div class="section" id="landing">
+      <h2>Welcome to the</h2>
+      <h1>
+        Cambridge
+        <br>
+        <b>Student Investment Fund</b>  
+      </h1>
+    </div>
+    <div class="section" id="signup">
+      <div class="section-text left">
+        <h2>
+          Join Cambridge's largest, most active, and most inclusive finance community.
+        </h2>
+      </div>
+      <div id="signup-entry" class="right">
+        <form 
+          method="POST"
+          action="https://script.google.com/macros/s/AKfycbxXrybvDoHhgh0ElQkzAGk-oEyy4VHkcz4WX_E3FKv_FQlwPSaLGkWhSGsYSzNpAlNP/exec"
+          id="signup-form"
+        >
+          <input id="signup-name" class="signup-input" type="text" name="FName" placeholder="First Name" required>
+          <input id="signup-email" class="signup-input" type="email" name="Email" placeholder="Email Address" required>
+          <input id="signup-submit" type="submit" value="Join the Mailing List">
+        </form>
+      </div>
+      <div id="signup-popup">
+        <h2> 
+          <b>Thanks for joining CamSIF.</b>
+          <br><br>
+          Check your email for a confirmation soon.
+        </h2>
+        <div id="signup-popup-close">
+          <p>Close</p>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="info">
+      <div class="section-text left">
+        <h2>
+          We provide eager students with a unique opportunity to gain experience in investment and markets.
+        </h2>
+      </div>
+      <div class="section-text right">
+        <h2>
+          No prior knowledge or experience in finance is required. 
+          We welcome Cambridge students of any degree course at any point in their education. 
+        </h2>
+      </div>
+      
+    </div>
+  </body>
+  <script src="../js/main.js"></script>
+  <script src="../js/index.js"></script>
+</html>
