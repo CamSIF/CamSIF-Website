@@ -27,6 +27,9 @@ body {
     
 }
 
+.section {
+    padding: 40px var(--page-margin);
+}
 
 @keyframes fadeInAnimation {
     0% {
@@ -77,7 +80,7 @@ body {
 .header .logo {
     display: inline-block;
     width: 200px;
-    padding: 20px 0px;
+    padding: 30px 0px;
 }
 
 .header .hamburger {
@@ -120,9 +123,8 @@ nav a {
     display: block;
     position: absolute;
     content: '';
-    height: 30%;
+    height: 36%;
     background-color: var(--main-color);
-
     top: 170%;
     width: 110%;
     left: -5%;
@@ -156,6 +158,10 @@ nav a {
     display: block;
     padding: 15px 40px;
     text-decoration: none;
+}
+
+#nav-spacer {
+    height: 10vh;
 }
 
 @media screen and (max-width: 1100px) {

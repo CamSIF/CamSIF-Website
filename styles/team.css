@@ -1,0 +1,100 @@
+:root {
+    --portrait-width: 250px;
+}
+
+body {
+    background-color: var(--grey-color);
+}
+
+#team-heading {
+    padding-bottom: 0;
+}
+
+#team-heading h2 {
+    color: white;
+    font-size: 50px;
+    margin: 0;
+}
+
+.gallery-header {
+    color: white;
+    font-size: 40px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    max-width: 320px;
+    margin: auto;
+    text-align: left;
+    padding: 20px;
+    color: white;
+    transition: all 2s;
+}
+
+.card details {
+    width: 100%;
+    position: relative;
+    height: var(--collapsed);
+    
+    overflow: hidden;
+    transition: height 300ms cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    cursor: pointer;
+}
+
+.card details[open] {
+    height: var(--expanded);
+    transition: height 300ms cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+.card summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .portrait-frame {
+    width: var(--portrait-width);
+    height: var(--portrait-width);
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.card img {
+    object-fit: cover;
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: var(--portrait-width);
+}
+
+.card .name {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.card .title {
+    margin: 0px;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.card .info {
+    z-index: 30;
+    width: inherit;
+}
+
+.card .header {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.card .content {
+    font-weight: 400;
+    font-size: 16px;
+}
