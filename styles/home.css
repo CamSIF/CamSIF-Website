@@ -31,7 +31,8 @@
     border-bottom: 100px solid var(--grey-color);
     padding-bottom: 30px;
     overflow: hidden;
-
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 
 
