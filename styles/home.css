@@ -29,7 +29,7 @@
     background-size: cover;
     background-position: center;
     border-bottom: 100px solid var(--grey-color);
-    padding-bottom: 0px;
+    padding-bottom: 30px;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -54,14 +54,13 @@
     font-size: 55px;
     margin: 0;
     padding: 0;
-    margin-bottom: 30px;
-    overflow-wrap: normal;
     
     opacity: 0;
     animation: fadeInAnimation 1.5s ease-out .6s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
 
 
 #signup {
