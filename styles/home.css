@@ -30,8 +30,8 @@
     background-position: center;
     border-bottom: 100px solid var(--grey-color);
     padding-bottom: 30px;
-    white-space: nowrap;
     overflow: hidden;
+
 }
 
 
