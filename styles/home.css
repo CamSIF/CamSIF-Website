@@ -27,6 +27,7 @@
         url(../assets/auditorium.png); 
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     border-bottom: 100px solid var(--grey-color);
     padding-bottom: 0px;
     white-space: nowrap;
@@ -54,6 +55,7 @@
     margin: 0;
     padding: 0;
     margin-bottom: 30px;
+    overflow-wrap: normal;
     
     opacity: 0;
     animation: fadeInAnimation 1.5s ease-out .6s;
