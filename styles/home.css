@@ -18,7 +18,7 @@
 
 
 #landing {
-    height: 75vh; 
+    height: 80vh; 
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -28,8 +28,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-bottom: 100px solid var(--grey-color);
-    padding-bottom: 30px;
     overflow: hidden;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
@@ -63,6 +61,14 @@
 }
 
 
+#about {
+    color: white;
+    font-weight: 400;
+}
+
+#about b {
+    color: var(--main-color);
+}
 
 #signup {
     vertical-align: middle;
