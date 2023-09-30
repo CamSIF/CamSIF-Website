@@ -18,7 +18,8 @@
 
 
 #landing {
-    height: 80vh; 
+    height: calc(100vh - var(--nav-height)); 
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -60,14 +61,82 @@
     animation-fill-mode: forwards;
 }
 
+#landing-chevron {
+    
+    opacity: 0;
+
+    animation: fadeInAnimation 1.5s ease-out .6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#landing a {
+    opacity: 0.5;
+    text-align: center;
+    color: var(--main-color);
+    font-size: 50px;
+    width: 100%;
+    padding: 20px 0px;
+    transition: ease-out .2s;
+}
+
+@media (hover: hover) {
+    #landing a:hover {
+        opacity: 1;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        transform: translateY(-10px) scaleX(1.3);
+        transition: ease-out .2s;
+    }
+}
 
 #about {
-    color: white;
+    background-color: white;
+    color: var(--grey-color);
     font-weight: 400;
 }
 
-#about b {
+#about > h2 {
+    font-size: 3.8vw;
+}
+
+#about > p {
+    font-size: large;
+}
+
+
+#stats {
+    background-color: var(--grey-color);
+    display: flex;
+    justify-content: center;
+}
+
+#stats-container {
+    display: flex;
+    height: 330px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    width: 500px;
     color: var(--main-color);
+    font-size: 48px;
+    text-wrap: nowrap;
+}
+
+.stat i {
+    padding-right: 40px;
+    font-size: 72px;
+}
+
+.stat span {
+    font-weight: 400;
+    white-space: pre-wrap;
+    height: min-content;
 }
 
 #signup {
@@ -133,8 +202,10 @@
 
 }
 
-#signup-submit:hover {
-    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+@media (hover:hover) {
+    #signup-submit:hover {
+        box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+    }
 }
 
 #signup-popup {
@@ -173,6 +244,7 @@
 #info {
     vertical-align: middle;
     display: flex;
+    justify-content: space-between;
     color: var(--main-color);
     gap: 50px;
     background-color: var(--grey-color);
@@ -184,11 +256,16 @@
     color: white;
 }
 
+#info .left h2 {
+    font-weight: 600;
+    font-size: 32px;
+}
+
 #info .left {
-    width: 55%;
+    width: 40%;
 }
 
 #info .right {
-    width: 45%;
+    width: 50%;
     
 }
