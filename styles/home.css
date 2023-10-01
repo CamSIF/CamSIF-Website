@@ -104,6 +104,12 @@
     font-size: large;
 }
 
+#about .join-button {
+    margin: 50px auto;
+    width: 30%;
+    text-align: center;
+    font-size: 28px;
+}
 
 #stats {
     background-color: var(--grey-color);
@@ -113,16 +119,18 @@
 
 #stats-container {
     display: flex;
-    height: 330px;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    /* border-top: 3px solid var(--main-color);
+    border-bottom: 3px solid var(--main-color); */
 }
 
 .stat {
+    flex: 1 0 34%;
     display: flex;
     align-items: center;
-    width: 500px;
+    width: var(--footer-div-width);
     color: var(--main-color);
     font-size: 48px;
     text-wrap: nowrap;
@@ -139,6 +147,74 @@
     height: min-content;
 }
 
+#about-detail  {
+    background-color: white;
+    font-weight: 400;
+}
+
+.about-detail {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 70px 0px;
+}
+
+.about-detail > h2 {
+    display: inline-block;
+    font-size: 3.6vw;
+    width: 100%;
+    margin: 50px 0;
+    border-bottom: 7px solid var(--grey-color);
+}
+
+.about-detail:nth-of-type(2) h2 {
+    text-align: right;
+}
+
+.detail-text {
+    width: 50%;
+    font-size: large;
+    flex: 1.5 0px;
+    margin-right: 30px;
+}
+
+.detail-text:nth-of-type(2) p {
+    padding-left: 40px;
+}
+
+.detail-text a, .detail-text a:visited {
+    color: var(--main-color);
+}
+
+.detail-text ul {
+    list-style-type: none;
+}
+
+.detail-text li {
+    font-weight: 500;
+    font-size: 36px;
+    font-style: italic;
+    padding-bottom: 30px;
+}
+
+.detail-image {
+    width: 400px;
+    height: 400px;
+    flex: 1 0px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+    /* border-radius: 20px; */
+    overflow: hidden;
+    margin: 20px 30px;
+}
+
+.detail-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
+
 #signup {
     vertical-align: middle;
     display: flex;
@@ -147,6 +223,7 @@
 
 #signup .section-text h2 {
     font-weight: 500;
+    font-size: 42px;
 }
 
 #signup .left {

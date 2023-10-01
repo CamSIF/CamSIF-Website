@@ -36,3 +36,43 @@ window.addEventListener("resize", function () {
     }
     $("#hamburger-checkbox").prop("checked", false);
 });
+
+let statAnim = anime({
+    targets: '.stat',
+    opacity: [0, 1],
+    translateY: [-100, 0],
+    duration: 1000,
+    easing: 'easeInOutQuad',
+    autoplay: false,
+    delay: anime.stagger(200),
+    complete: function(anim) {
+        anim.remove('.stat');
+    }
+});
+
+let meetingAnim = anime({
+    targets: '.detail-text li',
+    opacity: [0, 1],
+    translateY: [-100, 0],
+    duration: 1000,
+    easing: 'easeInOutQuad',
+    autoplay: false,
+    delay: anime.stagger(200),
+    complete: function(anim) {
+        anim.remove('.detail-text li');
+    }
+});
+
+$(window).scroll(function () {
+    $('.stat').each(function(i, obj) {
+        if ($(obj).isInViewport()) {
+            statAnim.play();
+        }
+    });
+    $('.detail-text li').each(function(i, obj) {
+        if ($(obj).isInViewport()) {
+            meetingAnim.play();
+        }
+    });
+});
+
