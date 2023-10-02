@@ -210,6 +210,10 @@ nav a {
     box-sizing: border-box;
 }
 
+#footer-sponsors {
+    display: block; 
+}
+
 #footer-sponsors a:hover {
     text-decoration: underline;
 }
