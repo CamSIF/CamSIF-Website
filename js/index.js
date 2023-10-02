@@ -17,7 +17,6 @@ window.addEventListener("load", function() {
         }
       })
       .then(() => {
-        console.log("bruh");
         $("#signup-popup").show()
         $("#signup-popup").addClass("fadeInSignupPopup");
       })
