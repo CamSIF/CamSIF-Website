@@ -211,7 +211,7 @@ nav a {
 }
 
 #footer-sponsors {
-    display: block; 
+    display: block;
 }
 
 #footer-sponsors a:hover {
@@ -252,7 +252,7 @@ nav a {
 }
 
 #footer-sponsors { order: 1; }
-#footer-logo {order: 2; }
+#footer-logo { order: 2; }
 #footer-signup { order: 3; }
 
 #copyright {
