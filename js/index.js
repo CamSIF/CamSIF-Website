@@ -13,10 +13,10 @@ window.addEventListener("load", function() {
       fetch(action, {
         method: 'POST',
         body: data,
-        headers: {
-        }
+        headers: {}
       })
-      .then(() => {
+      .then(response => {
+        console.log(response.json());
         $("#signup-popup").show()
         $("#signup-popup").addClass("fadeInSignupPopup");
       })
