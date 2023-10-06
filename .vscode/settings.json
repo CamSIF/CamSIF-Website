@@ -1,0 +1,8 @@
+{
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "liveServer.settings.mount": [
+        ["/site/home", "./site/home.html"],
+        ["/site/termcard", "./site/termcard.html"],
+        ["/site/team", "./site/team.html"]
+    ]
+}
