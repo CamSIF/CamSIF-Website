@@ -3,6 +3,7 @@
     "liveServer.settings.mount": [
         ["/site/home", "./site/home.html"],
         ["/site/termcard", "./site/termcard.html"],
-        ["/site/team", "./site/team.html"]
+        ["/site/team", "./site/team.html"],
+        ["/site/sponsorship", "./site/sponsorship.html"]
     ]
 }
