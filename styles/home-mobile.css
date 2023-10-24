@@ -36,13 +36,51 @@
         font-size: 50px;
     }
 
-    .about-portfolio h3 {
+    #about-portfolio {
+        position: relative;
+    }
+
+    #about-portfolio h3 {
         font-size: 30px;
     }
     
-    .about-portfolio h2 {
+    #about-portfolio > h2 {
         font-size: 36px;
     }
+
+    #svg-stonks {
+        height: auto;
+        position: relative;
+    }
+
+    #svg-stonks path {
+        stroke-dashoffset: 0;
+    }
+
+    .about-portfolio {
+        height: auto;
+        width: 100%;
+    }
+
+    .about-portfolio p {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-portfolio .button {
+        margin-top: 50px;
+        width: 80%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .about-portfolio .button h2 {
+        font-size: 24px;
+    }
+
+    .about-portfolio p { order: 1 }
+    .about-portfolio ul { order: 2 }
+    .about-portfolio .button { order: 3 }
 
     .about-detail > h2 {
         font-size: 36px;

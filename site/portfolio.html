@@ -1,0 +1,61 @@
+<!-- Use this for making new pages! -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CamSIF</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles/template.css">
+    <link rel="stylesheet" href="../styles/portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+      $(function(){
+        $("#nav").load("../templates/nav.html"); 
+      });
+      $(function(){
+        $("#footer").load("../templates/footer.html"); 
+      });
+    </script>
+    </head>
+  <body>
+    <div id="nav"></div>
+    <div class="section" id="info">
+      <h2>
+        Portfolio Management Competition
+      </h2>
+      <p>
+        To enhance the sector teams’ engagement beyond their termly stock pitch, 
+        and to foster the sense of community for our members, we’ve decided to restructure how we operate this year.
+      </p>
+      <div>
+        <h2>Sector Portfolios</h2>
+        <p>
+          Each sector team will be allocated a <b>simulated trading account</b> with a maximum of <b>5 long/short positions </b>at any time.
+          Teams can update their position on a weekly basis as moderated by our Porfolio Managers. 
+          <br><br>
+          Performance of each portfolio will be tracked and displayed on our website.
+        </p>
+      </div>
+      <div>
+        <h2>CamSIF Aggregated Portfolio</h2>
+        <p>
+          Each week, a new sector team will present an <b>investment pitch</b> for inclusion into our general portfolio,
+          followed by a response pitch from our experienced Portfolio Managers. 
+          <br><br>
+          Our members will then vote on an investment decision. If successful, the investment will be made under 
+          CamSIF’s aggregate portfolio.
+          <br><br>
+          Performance will be tracked and displayed alongside the individual departments.
+        </p>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+  <script src="../js/main.js"></script>
+</html>
