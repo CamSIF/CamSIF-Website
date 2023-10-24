@@ -12,7 +12,7 @@
     font-size: 50px;
 }
 
-#past-termcards h2 {
+#past-termcards > h2 {
     color: white;
 }
 
@@ -25,21 +25,8 @@
     overflow: hidden;
 }
 
-#past-termcards a:hover {
+#past-termcards .button:hover {
     border-radius: 20px;
     transition: ease-in-out .2s;
 }
 
-#issuu-button {
-    background-color: var(--main-color);
-    /* text-align: center; */
-    padding: 20px;
-    text-align: center;
-}
-
-
-
-#issuu-button h2 {
-    margin: 0;
-    color: black;
-}
