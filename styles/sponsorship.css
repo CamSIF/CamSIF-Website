@@ -4,7 +4,7 @@
     flex-direction: column;
 }
 
-#logo-gallery {
+.logo-gallery {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -17,6 +17,10 @@ h2 {
 }
 
 .sponsor-logo {
+    width: 48%;
+}
+
+#past-sponsors .sponsor-logo {
     width: 22%;
 }
 
