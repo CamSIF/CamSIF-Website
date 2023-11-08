@@ -11,6 +11,10 @@
     font-size: 36px;
 }
 
+#pnl-text {
+    text-align: center;
+}
+
 #info div {
     padding: 10px 50px;
     margin: 50px 0px;
