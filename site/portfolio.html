@@ -94,7 +94,16 @@
     Chart.defaults.borderColor = "#AAA3"
     Chart.defaults.color = '#FFF';
     (async function fetchData() {
-      const response = await fetch("https://portfolio.camsif.org/api/camsif_pnl");
+      const req = new FormData();
+      req.append("fund", "camsif_main");
+      
+      const response = await fetch(
+        "http://portfolio.camsif.org/api/camsif_pnl",
+        {
+          method: "POST",
+          body: req
+        }
+      );
       const data = await response.json();
       new Chart(
         document.getElementById('performance-graph'),
