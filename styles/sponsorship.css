@@ -13,7 +13,7 @@
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 100px;
 }
 
 .sponsor-logo {
@@ -25,11 +25,9 @@ h2 {
 }
 
 #sponsor-logos img {
+    height: 400px;
     width: 100%;
-    object-fit: cover;
-}
-
-#work-with-us {
+    object-fit: contain;
 }
 
 #work-with-us h2 {
@@ -67,11 +65,23 @@ h2 {
 @media screen and (max-width: 1100px) {
 
     h2 {
-        font-size: 40px;
+        font-size: 44px;
     }
 
     .sponsor-logo {
         width: 100%;
+    }
+
+    #current-sponsors img {
+        height: 200px;
+    }
+
+    #past-sponsors .sponsor-logo {
+        width: 100%;
+    }
+
+    #past-sponsors .sponsor-logo img {
+        height: 200px;
     }
 
     #work-with-us p {
