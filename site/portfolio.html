@@ -27,12 +27,12 @@
   <body>
     <div id="nav"></div>
     <div id="main">
-      <div class="section" id="performance-graph">
+      <div class="section" id="performance">
         <h2>
           Portfolio Performance
         </h2>
-        <div>
-          <canvas id="performance-graph-container"></canvas>
+        <div id="performance-graph-container">
+          <canvas id="performance-graph"></canvas>
         </div>
         <h2 id="pnl-text">PnL: </h2>
       </div> 
@@ -97,7 +97,7 @@
       const response = await fetch("https://portfolio.camsif.org/api/camsif_pnl");
       const data = await response.json();
       new Chart(
-        document.getElementById('performance-graph-container'),
+        document.getElementById('performance-graph'),
         {
           type: 'line',
           data: {
@@ -112,10 +112,13 @@
           options: {
                 scales: {
                     y: {
-                        suggestedMin: 9000000,
-                        suggestedMax: 11000000
+                        // suggestedMin: 9500000,
+                        // suggestedMax: 10500000
+                        grace: "200000"
                     },
-                }
+                },
+                responsive: true,
+                maintainAspectRatio: false,
               }
         }
       );
