@@ -44,6 +44,7 @@
             <a onclick="selectFund(this)">TMT</a>
           </div>
         </div>
+        <h2 id="graph-heading">Loadinng...</h2>
         <div id="performance-graph-container">
           <canvas id="performance-graph"></canvas>
         </div>
@@ -108,16 +109,20 @@
     Chart.defaults.borderColor = "#AAA3"
     Chart.defaults.color = '#FFF';
     function selectFund(element) {
-      let fund_name = "camsif_" + element.innerHTML.toLowerCase();
-      fetchData(fund_name);
+      fetchData(element.innerHTML);
     }
 
-    fetchData("camsif_main");
+    fetchData("Main");
 
-    async function fetchData(fund_name) {
+    async function fetchData(name) {
+      let fund_name = "camsif_" + name.toLowerCase();
+
       const container = document.getElementById("performance-graph-container")
-      container.innerHTML = "<h2>Loading...</h2>";
+      container.innerHTML = "";
 
+      const heading = document.getElementById("graph-heading");
+      heading.innerHTML = "<h2>Loading...</h2>";
+      
       const req = new FormData();
       console.log(fund_name);
       req.append("fund", fund_name);
@@ -133,9 +138,9 @@
       
       let canvas = document.createElement("canvas");
       canvas.id = "performance-graph"
-      container.textContent="";
       container.appendChild(canvas);
-  
+      
+      heading.innerHTML = "<h2>"+name+"</h2>";
 
       new Chart(
         document.getElementById('performance-graph'),

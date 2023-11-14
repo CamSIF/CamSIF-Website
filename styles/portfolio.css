@@ -14,7 +14,6 @@
 .dropdown {
     position: relative;
     display: inline-block;
-    margin-bottom: 50px;
 }
 
 .dropbtn {
@@ -53,11 +52,14 @@
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
+#graph-heading {
+    text-align: center;
+}
+
 #performance-graph-container{
     height: 500px;
     width: 100%;
-    position:relative;
-    text-align: center;
+    position: relative;
 }
 /* 
 #performance-graph {
