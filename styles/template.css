@@ -7,6 +7,11 @@
     --footer-div-width: calc((var(--page-width) - var(--page-margin) - var(--page-margin)) / 2);
 }
 
+@font-face {
+    font-family: GTUltra;
+    src: url(/assets/GTUltraFine-Bold.otf);
+}
+
 html {
     overflow: auto;
     scroll-behavior: smooth;

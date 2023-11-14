@@ -31,6 +31,19 @@
         <h2>
           Portfolio Performance
         </h2>
+        <div class="dropdown">
+          <button class="dropbtn">Select Fund</button>
+          <div class="dropdown-content">
+            <a onclick="selectFund(this)">Main</a>
+            <a onclick="selectFund(this)">Consumer</a>
+            <a onclick="selectFund(this)">Energy</a>
+            <a onclick="selectFund(this)">Healthcare</a>
+            <a onclick="selectFund(this)">Industrials</a>
+            <a onclick="selectFund(this)">Special_Sits</a>
+            <a onclick="selectFund(this)">Tech</a>
+            <a onclick="selectFund(this)">TMT</a>
+          </div>
+        </div>
         <div id="performance-graph-container">
           <canvas id="performance-graph"></canvas>
         </div>
@@ -91,11 +104,23 @@
   </body>
   <script src="../js/main.js"></script>
   <script>
+    
     Chart.defaults.borderColor = "#AAA3"
     Chart.defaults.color = '#FFF';
-    (async function fetchData() {
+    function selectFund(element) {
+      let fund_name = "camsif_" + element.innerHTML.toLowerCase();
+      fetchData(fund_name);
+    }
+
+    fetchData("camsif_main");
+
+    async function fetchData(fund_name) {
+      const container = document.getElementById("performance-graph-container")
+      container.innerHTML = "<h2>Loading...</h2>";
+
       const req = new FormData();
-      req.append("fund", "camsif_main");
+      console.log(fund_name);
+      req.append("fund", fund_name);
       
       const response = await fetch(
         "https://portfolio.camsif.org/api/camsif_pnl",
@@ -105,6 +130,13 @@
         }
       );
       const data = await response.json();
+      
+      let canvas = document.createElement("canvas");
+      canvas.id = "performance-graph"
+      container.textContent="";
+      container.appendChild(canvas);
+  
+
       new Chart(
         document.getElementById('performance-graph'),
         {
@@ -132,7 +164,7 @@
         }
       );
       document.getElementById('pnl-text').innerHTML = "PnL: " + data.percentage_pnl + "%"
-    })();
+    };
 
   </script>
 </html>
