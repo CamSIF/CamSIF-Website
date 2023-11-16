@@ -109,8 +109,15 @@
 
     .detail-image {
        flex: 1 500px;
-       height: 300px;
-       order: 1
+       height: 200px;
+       order: 1;
+       border-radius: 0;
+       margin: 0;
+    }
+
+    .detail-image img {
+        object-fit: contain;
+        object-position: top left;
     }
 
     #signup {
@@ -119,7 +126,7 @@
     }
 
     #signup .section-text h2 {
-        font-size: 1.5em;
+        font-size: 32px;
     }
 
     #signup form {
@@ -160,9 +167,7 @@
         vertical-align: middle;
         display: flex;
         flex-direction: column;
-        color: var(--main-color);
         gap: 10px;
-        background-color: var(--grey-color);
     }
 
     #info .left h2 {
@@ -173,7 +178,6 @@
     #info .right h2 {
         font-weight: 300;
         font-size: 23px;
-        color: white;
     }
     
     #info .left {

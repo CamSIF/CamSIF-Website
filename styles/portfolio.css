@@ -1,10 +1,12 @@
 #main {
-    color: white;
+    color: var(--dark-color);
     font-weight: 400;
 }
 
 #main h2 {
+    font-family: var(--main-font);
     font-size: 3.8vw;
+
 }
 
 #main p {
@@ -18,7 +20,7 @@
 
 .dropbtn {
     background-color: var(--main-color);
-    color: black;
+    color: var(--light-color);
     padding: 16px;
     font-size: 16px;
     font-family: "Poppins";
@@ -89,8 +91,8 @@
 }
 
 #info div:nth-of-type(1) {
-    background-color: var(--main-color);
-    color: black;
+    background-color: var(--dark-color);
+    color: var(--light-color);
 }
 
 #download-buttons {
@@ -107,7 +109,7 @@
     font-size: 36px;
     font-weight: 500;
     text-decoration: none;
-    color: black;
+    color: var(--light-color);
     white-space: nowrap;
 }
 
