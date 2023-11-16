@@ -1,6 +1,6 @@
 :root {
     --main-color: #fedc57;
-    --grey-color: #1c1d21;
+    --dark-color: #1c1d21;
     --page-width: 1100px;
     --page-margin: 150px;
     --nav-height: 95px;
@@ -28,7 +28,7 @@ html::-webkit-scrollbar {
 
 body {
 	margin: 0;
-    background-color: var(--grey-color);
+    background-color: var(--dark-color);
 	font-family: 'Poppins', sans-serif;
 	font-weight: 800;
     overflow: hidden;
@@ -84,7 +84,7 @@ a {
 
 #navbar {
     padding: 0px var(--page-margin);
-    background-color: var(--grey-color);
+    background-color: var(--dark-color);
     border: none;
     width: 100%;
     box-sizing: border-box;
@@ -192,7 +192,7 @@ nav a {
 }
 
 .join-button a {
-    color: var(--grey-color);
+    color: var(--dark-color);
     display: block;
     padding: 15px 40px;
     text-decoration: none;
@@ -315,8 +315,8 @@ nav a {
         margin-bottom: 30px;
         justify-content: center;
         width: 100%;
-        background-color: var(--grey-color);
-        outline: var(--page-margin) solid var(--grey-color);
+        background-color: var(--dark-color);
+        outline: var(--page-margin) solid var(--dark-color);
     }
 
     nav ul {
