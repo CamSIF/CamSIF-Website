@@ -149,11 +149,11 @@
         {
           type: 'line',
           data: {
-            labels: data.dates.map(date => date.substring(0,16)),
+            labels: data.dates.map(date => date.substring(0,16)).reverse(),
             datasets: [
               {
                 label: 'Portfolio Value',
-                data: data.values
+                data: data.values.reverse()
               }
             ]
           },
@@ -170,7 +170,7 @@
               }
         }
       );
-      document.getElementById('pnl-text').innerHTML = "PnL: " + data.percentage_pnl + "%"
+      document.getElementById('pnl-text').innerHTML = "PnL: " + data.percentage_pnl.toFixed(2) + "%"
     };
 
   </script>
