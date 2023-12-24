@@ -28,9 +28,17 @@
     <div id="nav"></div>
     <div id="main">
       <div class="section" id="performance">
-        <h2>
-          Portfolio Performance
-        </h2>
+        <h2>Porfolio Overview</h2>
+        <p>
+          Our portfolios are held on our proprietary platform <a href="https://synergy.camsif.org">Synergy</a>. 
+          For detailed performance and allocations, <a href="https://synergy.camsif.org">click here</a>
+        </p> 
+        
+        <h2 id="graph-heading">Loading...</h2>
+        <div id="performance-graph-container">
+          <canvas id="performance-graph"></canvas>
+        </div>
+        <h2 id="pnl-text">PnL: </h2>
         <div class="dropdown">
           <button class="dropbtn">Select Fund</button>
           <div class="dropdown-content">
@@ -44,11 +52,6 @@
             <a onclick="selectFund(this)">TMT</a>
           </div>
         </div>
-        <h2 id="graph-heading">Loadinng...</h2>
-        <div id="performance-graph-container">
-          <canvas id="performance-graph"></canvas>
-        </div>
-        <h2 id="pnl-text">PnL: </h2>
       </div> 
       <div class="section" id="info">
         <h2>

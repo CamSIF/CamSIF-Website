@@ -13,6 +13,10 @@
     font-size: 36px;
 }
 
+#performance a {
+    color: var(--main-color);
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -62,6 +66,9 @@
     height: 500px;
     width: 100%;
     position: relative;
+    padding: 20px;
+    border: 3px solid lightgray;
+    border-radius: 10px;
 }
 /* 
 #performance-graph {
