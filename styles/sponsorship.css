@@ -18,6 +18,12 @@ h2 {
     font-family: var(--main-font);
 }
 
+.sponsor-level {
+    width: 100%;
+    text-align: center;
+    font-size: 70px;
+}
+
 .sponsor-logo {
     width: 48%;
 }
