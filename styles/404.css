@@ -3,14 +3,14 @@
 }
 
 #four h2 {
-    color: white;  
+    color: var(--dark-color);  
     font-size: 50px; 
 }
 
 #four p {
     font-size: 24px;
     font-weight: 500;
-    color: white;
+    color: var(--dark-color);
 }
 
 #four a {
