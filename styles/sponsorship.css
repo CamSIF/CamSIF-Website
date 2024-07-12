@@ -58,6 +58,11 @@ h2 {
     object-fit: contain;
 }
 
+#data-sponsors img {
+    height: 100px;
+    width: 50%;
+}
+
 #work-with-us {
     color: var(--dark-color);
 }
